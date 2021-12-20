@@ -1,0 +1,14 @@
+{
+  "name": "notas-app",
+  "version": "1.0.0",
+  "description": "Crea, lee, borra y muestra notas",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js list"
+  },
+  "author": "David Herrera",
+  "license": "ISC",
+  "dependencies": {
+    "validator": "^13.7.0"
+  }
+}
