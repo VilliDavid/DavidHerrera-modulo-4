@@ -10,13 +10,21 @@
 <body>
     <h1>Como esta el clima</h1>
     <p>El clima en <spawn></spawn></p>
+    <form action="api/weather" method="GET">
+        <input id="search" placeholder="Ciudad" name="search">
+        <button>Buscar</button>
+    </form>
     <script>
-        // const url = 'http://api.weatherstack.com/current?access_key=1e6d8d82891cfcf6c36d345a49067c35&query=Chiapas&lenguaje=es'
+        // const inputCiudad = 
         const url = 'http://localhost:3000/api/weather?search=Chiapas';
         
-        fetch(url).then(function(response) {
-            console.log(response.status);
-        });
+        fetch(url)
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function (myJson) {
+                console.log(JSON.stringify(myJson));
+            });
     </script>
 </body>
 </html>
